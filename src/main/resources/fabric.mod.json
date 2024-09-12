@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "bcm",
+	"version": "${version}",
+	"name": "Beef's Crafting Mat",
+	"description": "A simple crafting mat to put on your tables!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GPLv3",
+	"icon": "assets/bcm/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.beefymuscle.craftingmat.BeefsCraftingMat"
+		],
+		"fabric-datagen": [
+			"net.beefymuscle.craftingmat.BeefsCraftingMatDataGenerator"
+		],
+		"client": [
+			"net.beefymuscle.craftingmat.BeefsCraftingMatClient"
+		]
+	},
+	"mixins": [
+		"bcm.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.5",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
