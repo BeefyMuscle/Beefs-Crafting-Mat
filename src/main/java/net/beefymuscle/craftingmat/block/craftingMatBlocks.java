@@ -1,5 +1,6 @@
 package net.beefymuscle.craftingmat.block;
 
+import com.mojang.serialization.MapCodec;
 import net.beefymuscle.craftingmat.BeefsCraftingMat;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.*;
@@ -11,15 +12,18 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 
 public class craftingMatBlocks {
 
     public static final Block CRAFTING_MAT = registerBlock("crafting_mat",
-            new CraftingTableBlock(AbstractBlock.Settings.create()
+            new CraftingMat(AbstractBlock.Settings.create()
                     .mapColor(MapColor.OAK_TAN)
                     .strength(2.5F)
                     .sounds(BlockSoundGroup.WOOD)
-                    .burnable()));
+                    .burnable()) {
+            });
 
 
     private static Block registerBlock(String name, Block block){

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "bcm:block/crafting_mat"
+    }
+  }
+}
